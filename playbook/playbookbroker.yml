@@ -1,0 +1,63 @@
+---
+  - hosts:
+      - all
+    become: yes
+    tasks:
+      - name: ansible create directory example
+        file:
+          path: "{{ item }}"
+          state: directory
+          mode: '0755'
+        with_items: '{{ createfolder }}'
+
+      - name: Install needed software
+        yum:
+          name: "{{ item }}"
+          state: present
+        with_items: '{{ neededapps }}'
+
+      - name: Download kafka
+        get_url:
+          url: "{{ kafkafolder }}"
+          dest: "{{ projectfolder }}"
+          mode: '0440'
+
+      - name: Unzip kafka
+        ansible.builtin.unarchive:
+          src: "{{ unzipkafka }}"
+          dest:  "{{ projectfolder }}"
+          remote_src: yes
+     
+      - name: Write welcome message
+        ansible.builtin.template:
+          src: welcome_message.j2
+          dest: /etc/profile.d/welcome_message.sh
+          owner: root
+          group: root
+          mode: '0644'
+
+  - hosts:
+      - broker
+    become: yes
+    tasks:
+      - name: Write producer and consumer codes
+        ansible.builtin.template:
+          src: producer_message.j2 
+          dest: /home/ec2-user/project/pythoncode/producer_message.py
+          owner: ec2-user
+          group: ec2-user
+          mode: '0644'
+
+      - name: Write producer and consumer codes
+        ansible.builtin.template:
+          src: consumer_message.j2
+          dest: /home/ec2-user/project/pythoncode/consumer_message.py
+          owner: ec2-user
+          group: ec2-user
+          mode: '0644'
+
+      - name: Install kafka python package
+        pip:
+          name: kafka-python
+
+

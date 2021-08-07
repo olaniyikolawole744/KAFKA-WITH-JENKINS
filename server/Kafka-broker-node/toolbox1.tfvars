@@ -1,0 +1,7 @@
+az2                 = "us-west-2a"
+subnet-suffix       = "a" 
+role2               = "kafka-broker-node"
+purpose2            = "kafka-broker-node"
+region              = "us-west-2"
+inboundport         = "9092"
+machine-ami         = "my-linux-ami"
