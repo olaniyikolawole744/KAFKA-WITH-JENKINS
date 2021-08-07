@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Create Broker Node') {
             steps {
-                sh 'ls && cd server && ls && cd kafka-broker-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars'
+                sh 'ls && cd server && ls && ls && ls && terraform init && terraform plan -var-file=toolbox1.tfvars'
             }
         }
         stage('Create Zookeeper Node') {
