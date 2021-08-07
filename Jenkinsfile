@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build VPC') {
             steps {
-                sh 'cd kafka && cd vpc-nodule && terraform init && terraform apply -var-file=vpc.tfvars && --auto-approve'
+                sh 'ls && cd kafka && cd vpc-nodule && terraform init && terraform apply -var-file=vpc.tfvars && --auto-approve'
             }
         }
         stage('Build AMI') {
