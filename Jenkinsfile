@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build AMI') {
             steps {
-                sh 'ls && cd packer && ls && export PACKER_LOG=1 && export PACKER_LOG_PATH=$WORKSPACE/packer.log && echo "packer log path:" $PACKER_LOG_PATH && packer build linux.json &&  /usr/bin/packer build ubuntu.json'
+                sh 'ls && cd packer && ls && export PACKER_LOG=1 && export PACKER_LOG_PATH=$WORKSPACE/packer.log && echo "packer log path:" $PACKER_LOG_PATH && /usr/bin/packer build linux.json &&  /usr/bin/packer build ubuntu.json'
             }
         }
         stage('Create Broker Node') {
