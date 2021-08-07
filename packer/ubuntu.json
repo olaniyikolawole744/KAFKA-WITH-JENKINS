@@ -1,7 +1,7 @@
 {
  "variables": {
-"access_key": "{{env `ACCESS_KEY_1`}}",
-"secret_key": "{{env `SECRET_KEY_1`}}"
+"access_key": "{{env `ACCESS_KEY_LENNIPSS`}}",
+"secret_key": "{{env `SECRET_KEY_LENNIPSS`}}"
  },
 
   "builders": [
@@ -10,9 +10,9 @@
   "type": "amazon-ebs",
   "access_key": "{{user `access_key`}}", 
   "secret_key": "{{user `secret_key`}}",
-  "region": "us-west-2",
+  "region": "us-east-1",
   "ami_name": "my-ubuntu-ami",
-  "source_ami": "ami-03d5c68bab01f3496",
+  "source_ami": "ami-09e67e426f25ce0d7",
   "instance_type": "t2.micro",
   "ssh_username": "ubuntu",
   "Tags": {
