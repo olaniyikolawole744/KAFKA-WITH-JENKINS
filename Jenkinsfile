@@ -32,6 +32,11 @@ pipeline {
                 sh 'ls && cd server && cd Tool-server-1 && ls && terraform init && terraform plan -var-file=monitoring.tfvars'
             }
         }
+        stage('Play Ansible playbook') {
+            steps {
+                sh 'ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/host'
+            }
+        }
     }
 }
 
