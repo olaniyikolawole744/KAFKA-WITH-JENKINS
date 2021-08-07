@@ -19,17 +19,17 @@ pipeline {
         }
         stage('Create Broker Node') {
             steps {
-                sh 'ls && cd server && ls && cd Kafka-broker-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars'
+                sh 'ls && cd server && ls && cd Kafka-broker-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform apply -var-file=toolbox1.tfvars --auto-approve'
             }
         }
         stage('Create Zookeeper Node') {
             steps {
-                sh 'ls && cd server && cd kafka-zookeeper-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars'
+                sh 'ls && cd server && cd kafka-zookeeper-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform apply -var-file=toolbox1.tfvars --auto-approve'
             }
         }
         stage('Create Tool-server-1') {
             steps {
-                sh 'ls && cd server && cd Tool-server-1 && ls && terraform init && terraform plan -var-file=monitoring.tfvars'
+                sh 'ls && cd server && cd Tool-server-1 && ls && terraform init && terraform plan -var-file=monitoring.tfvars && terraform apply -var-file=monitoring.tfvars --auto-approve'
             }
         }
         stage('Play Ansible playbook') {
