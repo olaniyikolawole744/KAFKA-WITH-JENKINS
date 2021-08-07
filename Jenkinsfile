@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build VPC') {
             steps {
-                sh 'ls && cd vpc-module && terraform init && terraform plan -var-file=vpc.tfvars'
+                sh 'ls && cd vpc-module && terraform init && terraform plan -var-file=vpc.tfvars && terraform apply -var-file=vpc.tfvars --auto-approve'
             }
         }
         stage('Build AMI') {
