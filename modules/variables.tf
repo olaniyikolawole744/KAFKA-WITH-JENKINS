@@ -11,7 +11,7 @@ variable "availability-zone" {
 
 variable "key-name" {
   type    = string
-  default = "train-oregon-kp"
+  default = "jenkins-kp"
 }
 
 variable "environment" {
