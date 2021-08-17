@@ -12,7 +12,7 @@ welcome_message: Broker
 jinjafiles:
   - producer_message
   - consumer_message
-brokernode: 54.149.224.187
+brokernode: 100.27.17.192
 producer_data: "techbleat', value=b'This is simple stuff"
 projectfolder: /home/ec2-user/project/
 codefolder: /home/ec2-user/project/Pythoncode
