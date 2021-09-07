@@ -9,13 +9,13 @@
       "type": "amazon-ebs",
       "access_key": "{{user `access_key`}}", 
       "secret_key": "{{user `secret_key`}}",
-      "region": "us-east-1",
-      "ami_name": "my-linux-ami",
+      "region": "us-west-2",
+      "ami_name": "my-linux-ami2",
       "source_ami": "ami-0c2b8ca1dad447f8a",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
       "Tags": {
-        "Name": "my-linux-ami"
+        "Name": "my-linux-ami2"
       }
   }
 ],
