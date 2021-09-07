@@ -12,7 +12,7 @@
   "secret_key": "{{user `secret_key`}}",
   "region": "us-west-2",
   "ami_name": "my-ubuntu-ami2",
-  "source_ami": "ami-09e67e426f25ce0d7",
+  "source_ami": "ami-03d5c68bab01f3496",
   "instance_type": "t2.micro",
   "ssh_username": "ubuntu",
   "Tags": {

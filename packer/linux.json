@@ -11,7 +11,7 @@
       "secret_key": "{{user `secret_key`}}",
       "region": "us-west-2",
       "ami_name": "my-linux-ami2",
-      "source_ami": "ami-0c2b8ca1dad447f8a",
+      "source_ami": "ami-0c2d06d50ce30b442",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
       "Tags": {
