@@ -11,9 +11,9 @@ pipeline {
     stages {
         stage('Build VPC.') {
             steps {
-           withEnv([AWS_ACCESS_KEY_ID='${AWS_ACCESS_KEY_ID}', AWS_SECRET_ACCESS_KEY='${AWS_SECRET_ACCESS_KEY}', AWS_DEFAULT_REGION='${AWS_DEFAULT_REGION}']) {
-           sh 'ls && cd vpc-module && terraform init && terraform plan -var-file=vpc.tfvars && terraform apply -var-file=vpc.tfvars --auto-approve'
-                }           
+           
+           sh '-e $AWS_ACCESS_KEY_ID -e $AWS_SECRET_ACCESS_KEY -e $AWS_DEFAULT_REGION && ls && cd vpc-module && terraform init && terraform plan -var-file=vpc.tfvars && terraform apply -var-file=vpc.tfvars --auto-approve'
+                        
             }
         }
         stage('Build AMI') {
