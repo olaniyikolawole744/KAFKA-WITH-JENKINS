@@ -18,7 +18,7 @@ module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   name = var.vpc-tag-name
   cidr = var.vpc-cidr-block
-  azs             = ["us-east-1a", "us-east-1c"]
+  azs             = ["us-west-2a", "us-west-2c"]
   public_subnets  = ["20.0.101.0/24", "20.0.102.0/24"]
   tags = {
     Terraform = "true"
