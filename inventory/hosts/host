@@ -1,5 +1,5 @@
 [broker]
-54.83.139.74 ansible_ssh_user=ec2-user
+54.202.85.141 ansible_ssh_user=ec2-user
 
 [zookeeper]
-54.209.138.207 ansible_ssh_user=ec2-user
+52.32.175.229 ansible_ssh_user=ec2-user
