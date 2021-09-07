@@ -24,7 +24,7 @@ data "aws_subnet" "server-subnet" {
 vpc_id = data.aws_vpc.server-vpc.id
 filter {
     name   = "tag:Name"
-    values = ["devop-vpc-public-${var.availability-zone}"]
+    values = ["devop-vpc3-public-${var.availability-zone}"]
  }
 }
 
