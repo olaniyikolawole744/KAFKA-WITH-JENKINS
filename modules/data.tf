@@ -16,7 +16,7 @@ data "aws_ami" "server-ami" {
 
 data "aws_vpc" "server-vpc" {
    tags = {
-      name = "devop-vpc"
+      name = "devop-vpc3"
    }
 }
 

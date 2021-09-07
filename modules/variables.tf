@@ -41,15 +41,15 @@ variable "az-suffix" {
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 variable "az-suffix-2" {
   type = map
   default = {
-    "us-east-1a" = 0
-    "us-east-1b" = 1
-    "us-east-1c" = 2
+    "us-west-2a" = 0
+    "us-west-2b" = 1
+    "us-west-2c" = 2
       }
 }
 

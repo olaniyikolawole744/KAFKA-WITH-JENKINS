@@ -1,9 +1,9 @@
 variable "vpc-cidr-block" {
-    default = "10.0.0.0/16"
+    default = "30.0.0.0/16"
 }
 
 variable "vpc-tag-name" {
-    default = "devop-vpc"
+    default = "devop-vpc3"
 }
 
 variable "az-suffix" {
