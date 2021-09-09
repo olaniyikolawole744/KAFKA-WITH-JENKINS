@@ -10,12 +10,12 @@
       "access_key": "{{user `access_key`}}", 
       "secret_key": "{{user `secret_key`}}",
       "region": "us-west-2",
-      "ami_name": "my-linux-ami2",
+      "ami_name": "kafka-linux-ami",
       "source_ami": "ami-0c2d06d50ce30b442",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
       "Tags": {
-        "Name": "my-linux-ami2"
+        "Name": "kafka_linux_ami"
       }
   }
 ],
