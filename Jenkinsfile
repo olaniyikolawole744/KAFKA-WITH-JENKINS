@@ -26,23 +26,23 @@ pipeline {
         }
         stage('Create Broker Node') {
             steps {
-                sh 'ls && cd server && ls && cd Kafka-broker-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform apply -var-file=toolbox1.tfvars --auto-approve'
+                sh 'ls && cd server && ls && cd Kafka-broker-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform destroy -var-file=toolbox1.tfvars --auto-approve'
             }
         }
         stage('Create Zookeeper Node') {
             steps {
-                sh 'ls && cd server && cd kafka-zookeeper-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform apply -var-file=toolbox1.tfvars --auto-approve'
+                sh 'ls && cd server && cd kafka-zookeeper-node && ls && terraform init && terraform plan -var-file=toolbox1.tfvars && terraform destroy -var-file=toolbox1.tfvars --auto-approve'
             }
         }
         stage('Create Tool-server-1') {
             steps {
-                sh 'ls && cd server && cd Tool-server-1 && ls && terraform init && terraform plan -var-file=monitoring.tfvars && terraform apply -var-file=monitoring.tfvars --auto-approve'
+                sh 'ls && cd server && cd Tool-server-1 && ls && terraform init && terraform plan -var-file=monitoring.tfvars && terraform destroy -var-file=monitoring.tfvars --auto-approve'
             }
         }
         stage('Play Ansible playbook') {
             steps {
-               sh 'chmod inventory/hosts/ec2.py'
-               sh 'chmod invemtory/hosts/ec2.ini'
+               sh 'chmod 755 inventory/hosts/ec2.py'
+               sh 'chmod 755 invemtory/hosts/ec2.ini'
                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/ec2.py'
             }
         }
