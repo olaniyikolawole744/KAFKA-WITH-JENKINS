@@ -1,0 +1,32 @@
+{
+    "variables": {
+      "access_key": "{{env `ACCESS_KEY_LENNIPSS`}}",
+      "secret_key": "{{env `SECRET_KEY_LENNIPSS`}}"
+       },
+      
+    "builders": [
+      {
+        "type": "amazon-ebs",
+        "access_key": "{{user `access_key`}}", 
+        "secret_key": "{{user `secret_key`}}",
+        "region": "us-west-2",
+        "ami_name": "kafka-linux-ami_agent",
+        "source_ami": "ami-0c2d06d50ce30b442",
+        "instance_type": "t2.micro",
+        "ssh_username": "ec2-user",
+        "Tags": {
+          "Name": "kafka_linux_ami_agent"
+        }
+    }
+  ],
+    "provisioners": [
+      {
+        "type": "shell",
+        "script": "agent_dependency.sh"
+      }
+    ],
+    "sensitive-variables": ["access_key","secret_key"]
+  }
+  
+  
+  

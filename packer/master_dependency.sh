@@ -10,7 +10,7 @@ sudo tar xzf Python-2.7.18.tgz
 sudo yum install python2.7 pip -y
 
 #INSTALL BOTO
-pip2.7 install boto
+sudo pip2.7 install boto
 
 # INSTALL ANSIBLE
 sudo amazon-linux-extras install ansible2
