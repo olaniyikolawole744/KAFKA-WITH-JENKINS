@@ -30,3 +30,6 @@ HQAAAAtzc2gtZWQyNTUxOQAAACD1Pe2/bmiXeymQnRqxSCnkpx4d3Byqjskk/UP1+GQhMA
 AAAEBmG7i6VxhlPcfzTN3IM5yq/a1Pc9oyXU39zK/YcTs2rPU97b9uaJd7KZCdGrFIKeSn
 Hh3cHKqOyST9Q/X4ZCEwAAAAFTE0ODA5QExBUFRPUC1ORDEzSVMzNg==
 -----END OPENSSH PRIVATE KEY-----' >> /home/ec2-user/.ssh/id_rsa.pub
+
+# CHANGE MODE ON PRIVATE KEY
+chmod 400 /home/ec2-user/.ssh/id_rsa
