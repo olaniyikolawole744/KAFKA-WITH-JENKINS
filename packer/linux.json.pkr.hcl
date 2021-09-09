@@ -27,7 +27,7 @@ variable "secret_key" {
   sensitive = true
 }
 
-# source blocks are generated from your builders; a source can be referenced in
+# source blocks are generated from your builders; a source can be referenced in ..........
 # build blocks. A build block runs provisioner and post-processors on a
 # source. Read the documentation for source blocks here:
 # https://www.packer.io/docs/templates/hcl_templates/blocks/source
