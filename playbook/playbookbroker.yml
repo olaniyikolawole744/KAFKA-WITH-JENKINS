@@ -1,6 +1,7 @@
 ---
   - hosts:
-      - all
+    # - all
+      - tag_Environment_kafka
     become: yes
     tasks:
       - name: ansible create working directory
@@ -36,17 +37,11 @@
           group: root
           mode: '0644'
 
-  #- hosts:
-  #    - zookeeper
-  #  become: yes
-  #  tasks:
-  #    - name: change working directory to kafka folder then start zookeeper engine
-  #      ansible.builtin.shell:
-  #        cmd: bin/zookeeper-server-start.sh config/zookeeper.properties
-  #        chdir: /home/ec2-user/project/kafka_2.13-2.8.0/
+  
 
   - hosts:
-      - broker
+    # - broker
+      - tag_Name_kafka_broker_node
     become: yes
     tasks:
       - name: Write producer code to producer node
@@ -88,5 +83,12 @@
 #          cmd: bin/kafka-server-start.sh config/kafka.properties
 #          chdir: /home/ec2-user/project/kafka_2.13-2.8.0/
 
-
+#- hosts:
+  #    - zookeeper
+  #  become: yes
+  #  tasks:
+  #    - name: change working directory to kafka folder then start zookeeper engine
+  #      ansible.builtin.shell:
+  #        cmd: bin/zookeeper-server-start.sh config/zookeeper.properties
+  #        chdir: /home/ec2-user/project/kafka_2.13-2.8.0/
 

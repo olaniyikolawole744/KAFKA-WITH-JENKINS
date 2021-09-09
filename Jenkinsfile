@@ -41,7 +41,9 @@ pipeline {
         }
         stage('Play Ansible playbook') {
             steps {
-                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/host'
+               sh 'chmod inventory/hosts/ec2.py'
+               sh 'chmod invemtory/hosts/ec2.ini'
+               sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/ec2.py'
             }
         }
     }
