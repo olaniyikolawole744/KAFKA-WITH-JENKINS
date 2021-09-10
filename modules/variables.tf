@@ -16,7 +16,7 @@ variable "key-name" {
 
 variable "environment" {
   type    = string
-  default = "env"
+  default = "kafka"
 }
 
 variable "role" {
