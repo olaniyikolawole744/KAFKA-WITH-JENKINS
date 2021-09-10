@@ -10,7 +10,7 @@ pip2.7 install boto3
 
 
 
-#NEW STEPS GENERATE SSH KEYS
+#NEW STEPS GENERATE SSH KEYS...
 #on host server:
 touch /home/ec2-user/.ssh/id_rsa
 touch /home/ec2-user/.ssh/id_rsa.pub
