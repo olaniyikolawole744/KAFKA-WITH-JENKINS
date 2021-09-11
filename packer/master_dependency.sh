@@ -1,7 +1,7 @@
 # NEW STEPS INSTALL DEPENDENCIES
 wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
 sudo tar xzf Python-2.7.18.tgz
-sudo yum install python2.7 pip -y
+sudo yum install Python2.7 pip -y
 pip2.7 install boto
 sudo amazon-linux-extras install ansible2
 pip2.7 install boto3
