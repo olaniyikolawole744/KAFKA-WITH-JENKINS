@@ -12,7 +12,7 @@ pipeline {
         stage('Build VPC.') {
             steps {
            withCredentials([string(credentialsId: 'AWS_ACCESS_KEY_ID', variable: ''), string(credentialsId: 'AWS_SECRET_ACCESS_KEY', variable: ''), string(credentialsId: 'AWS_DEFAULT_REGION', variable: '')]) {
-           sh 'ls && cd vpc-module && terraform init && /usr/local/bin/terraform terraform apply -var-file=vpc.tfvars --auto-approve'
+           sh 'ls && cd vpc-module && terraform init && /usr/local/bin/terraform apply -var-file=vpc.tfvars --auto-approve'
             }           
             }
         }
