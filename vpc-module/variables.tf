@@ -1,5 +1,5 @@
 variable "vpc-cidr-block" {
-    default = "30.0.0.0/16"
+    default = "20.0.0.0/16"
 }
 
 variable "vpc-tag-name" {
