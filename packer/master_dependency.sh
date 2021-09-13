@@ -6,8 +6,8 @@ sudo yum install Python2.7.18 pip -y
 pip2.7 install boto
 sudo amazon-linux-extras install ansible2
 pip2.7 install boto3
-chmod 755 ec2.py
-chmod 755 ec2.ini
+#chmod 755 ec2.py
+#chmod 755 ec2.ini
 
 
 
