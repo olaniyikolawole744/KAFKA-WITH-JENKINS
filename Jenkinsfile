@@ -19,9 +19,7 @@ pipeline {
         stage('Build AMI') {
             steps {
                 withCredentials([string(credentialsId: 'ACCESS_KEY', variable: ''), string(credentialsId: 'SECRET_KEY', variable: ''), string(credentialsId: 'AWS_DEFAULT_REGION', variable: '')]) {
-                
-                # sh 'cd packer && ls && export PACKER_LOG=1 && export PACKER_LOG_PATH=$WORKSPACE/packer.log && echo "packer log path:" $PACKER_LOG_PATH && /usr/bin/packer build master_linux.json &&  /usr/bin/packer build agent_linux.json'
-                  sh 'ls'
+                 sh 'ls'
                 }
            }
         }
