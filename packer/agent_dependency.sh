@@ -1,4 +1,3 @@
 #!/bin/bash
 sudo yum install java -y
 echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPU97b9uaJd7KZCdGrFIKeSnHh3cHKqOyST9Q/X4ZCEw 14809@LAPTOP-ND13IS36' >> /home/ec2-user/.ssh/authorized_keys
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrIdyNlTnn/qB0smG3Zw/n8XT6XIwwqPBRKSdeUAPN34bBxk3ewF6OeDJIVBznSm7TJLDML8YaNOGtPUveUC0/DW8tj5OS4rYvqoJUaGbXcsz/4xA25HtH9PrT6tt2asLXecip/RAnY7k1PxX6BiKwuBDxd4Q8z/Q8mH3T0lhljTsDQy4YwTOA/z7et0yS6asKIjlHM1kqdeTQS4DhuiaSYJHNrNofJntFhlrV/b5II65aU48C3W+5EC80cHcHE6vOJgYQ/Xqd0O8brKInLVPSQRI1NDBVJXRyj/NQaJGzDCzR6Q96eByi73B2FvHT6DC7Fnx4gX7iEtjGQxTey6lH ansible-generated on ip-10-0-101-170.us-west-2.compute.internal' >> /home/ec2-user/.ssh/authorized_keys
