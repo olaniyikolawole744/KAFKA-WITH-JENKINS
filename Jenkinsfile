@@ -45,7 +45,7 @@ pipeline {
                sh 'sudo chmod 755 inventory/hosts/ec2.py'
                sh 'sudo chmod 755 inventory/hosts/ec2.ini'
                sh 'ls'
-               sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/host'
+               sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook/playbookbroker.yml -i inventory/hosts/ec2.py'
             }
         }
     }
